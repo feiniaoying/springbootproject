@@ -1,0 +1,48 @@
+server:
+  port: 8081
+  
+ #自定义属性值
+chenwt: 
+   qqmailhost: smtp.qq.com
+   qqusername: 1620510119@qq.com
+   wangyumailhost: smtp.163.com  
+   wangyuusername: feiniaoying@163.com
+   
+#spring: 
+#   mail:
+#    host: smtp.163.com
+#    username: feiniaoying@163.com
+#    password: chenwt520
+#    properties:
+#      mail:
+#        smtp: 
+#          auth: true
+#          starttls: 
+#            enable: true
+#            required: true
+            
+
+            
+########################################################
+###mail setting  sxgdyduuwqxsfabg  blytwqkmyfchdaad
+########################################################
+spring:
+  mail:
+  # 设置邮箱主机
+    host: ${chenwt.wangyumailhost}
+    # 设置用户名
+    username: ${chenwt.wangyuusername}
+    # 设置密码
+    password: chenwt520
+  # 设置是否需要认证，如果为true,那么用户名和密码就必须的，
+  # 如果设置false，可以不设置用户名和密码，当然也得看你的对接的平台是否支持无密码进行访问的。
+    properties:
+      mail:
+       smtp.auth: ture
+       # STARTTLS[1]  是对纯文本通信协议的扩展。它提供一种方式将纯文本连接升级为加密连接（TLS或SSL），而不是另外使用一个端口作加密通信。
+       smtp.starttls.enable: ture
+       smtp.starttls.required: ture
+       
+
+    
+       
