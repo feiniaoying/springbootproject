@@ -1,0 +1,15 @@
+server:
+  port: 8081
+  context-path: /
+  
+  
+person: 
+  name: chenwt
+  year: 18
+  
+  
+dataConnectInfo:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&useSSL=true
+    userName: chenwt
+    passWord: 510520 

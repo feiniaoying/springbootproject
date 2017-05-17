@@ -1,7 +1,4 @@
-server:
-  port: 8081
-  
- #自定义属性值
+#自定义属性值
 chenwt: 
    qqmailhost: smtp.qq.com
    qqusername: 1620510119@qq.com
@@ -24,10 +21,25 @@ chenwt:
 
             
 ########################################################
-###mail setting  sxgdyduuwqxsfabg  blytwqkmyfchdaad
+###mail setting  
+### SpringBoot可以统一的配置application.yaml，但是目前仅仅支持dbcp、dbcp2、hikari下面这种方式无法不支持的DruidDataSource的其他参数
 ########################################################
 spring:
-  mail:
+   profiles:
+    active: dev 
+   jpa:
+    show-sql: true
+    jpa:
+    hibernate:
+      ddl-auto: update
+   datasource:
+    name: test
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&useSSL=true
+    username: chenwt
+    password: 510520 
+    type: com.alibaba.druid.pool.DruidDataSource
+   mail:
   # 设置邮箱主机
     host: ${chenwt.wangyumailhost}
     # 设置用户名
@@ -42,6 +54,33 @@ spring:
        # STARTTLS[1]  是对纯文本通信协议的扩展。它提供一种方式将纯文本连接升级为加密连接（TLS或SSL），而不是另外使用一个端口作加密通信。
        smtp.starttls.enable: ture
        smtp.starttls.required: ture
+   
+    
+   
+    
+#actuator
+#management.port=58888
+#management.context-path=/actuator
+
+#actuator
+management:
+  port: 58888
+  context-path: /public
+  security: 
+      enabled: false
+
+      
+      
+logging:
+  level: 
+    com.zkzj.demo: debug
+
+
+  
+    
+      
+
+ 
        
 
     
