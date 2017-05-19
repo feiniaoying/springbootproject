@@ -5,7 +5,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
 
 import com.zkzj.demo.dao.UserRepository;
@@ -17,17 +18,29 @@ import com.zkzj.demo.entity.User;
  */
 @Service
 public class UserService {
+    private transient Log log = LogFactory.getLog(this.getClass());
+
     @Resource
     private UserRepository userDao;
 
     public User getUserInfo(Long id) {
-        User user1 = userDao.findOne(id);
-        List<User> list = userDao.findByAge(22);
-        List<User> list1 = userDao.findAll();
+//        User user1 = userDao.findOne(id);
+//        List<User> list = userDao.findByAge(22);
+//        List<User> list1 = userDao.findAll();
+//    	log.error("----------------------第一次查询---------------------------------");
+// 	    User user1 = userDao.findOne(1L);	
+// 	    log.error("----------------------第二次查询---------------------------------");
+// 	    User user2 = userDao.findOne(1L);	
+    	
         return userDao.findOne(id);
        // return null;
     }
-
+ 
+    
+    public List<User> getUserInfoByAge(int age) {
+        return userDao.findByAge(age);
+    	
+    }
     public int updateUserInfo(User user) {
         return 0;
     }

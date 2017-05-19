@@ -44,3 +44,6 @@ http://127.0.0.1:8081/admin/#/
 ==================================================================================================================================
 ![adminUI](https://github.com/feiniaoying/springbootproject/blob/master/效果图/adminUI监控系统效果图4.png "adminUI监控系统效果图4.png")
 
+
+第四次提交：
+Spring boot 加入缓存Guava

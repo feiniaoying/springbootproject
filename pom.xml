@@ -29,6 +29,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
+		<!-- SpringBoot默认的缓存方式就是在内存中通过ConCurrentMap结构来进行数据的缓存。 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
@@ -105,6 +106,15 @@
 			<artifactId>druid</artifactId>
 			<version>1.0.28</version>
 		</dependency>
+
+		<!-- 这里选择guava作为缓存-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>20.0-rc1</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
