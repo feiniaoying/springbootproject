@@ -21,3 +21,10 @@ spring boot actuator性能监控（参考文档：http://www.jianshu.com/p/154fb
 
 spring boot druid整合
 http://127.0.0.1:8081/druid/datasource.html
+
+
+第三次提交：
+Spring	Aop测试
+
+Spring Boot admin-UI监控系统
+http://127.0.0.1:8081/admin/#/

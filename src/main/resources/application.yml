@@ -27,6 +27,16 @@ chenwt:
 spring:
    profiles:
     active: dev 
+   application: 
+    name: Spring Boot Admin Web
+   boot: 
+    admin:
+      context-path: /admin
+      url: http://localhost:${server.port}
+    jackson:
+      serialization:
+        indent-output: true
+    
    jpa:
     show-sql: true
     jpa:
@@ -55,8 +65,7 @@ spring:
        smtp.starttls.enable: ture
        smtp.starttls.required: ture
    
-    
-   
+  
     
 #actuator
 #management.port=58888
@@ -74,6 +83,7 @@ management:
 logging:
   level: 
     com.zkzj.demo: debug
+    
 
 
   
